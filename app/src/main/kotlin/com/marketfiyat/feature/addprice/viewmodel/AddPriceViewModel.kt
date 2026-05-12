@@ -292,6 +292,34 @@ class AddPriceViewModel @Inject constructor(
         return errors
     }
 
+
+    fun loadFromOcrResult(rawText: String) {
+        val lines = rawText.lines()
+        val priceRegex = Regex("""(\d+[.,]\d{2})""")
+        val knownMarkets = listOf("A101","BIM","SOK","Migros","CarrefourSA","Hakmar","Metro","MANAV","MARKET")
+        var detectedMarket: String? = null
+        var detectedPrice: String? = null
+        var detectedProduct: String? = null
+        lines.forEach { line ->
+            val trimmed = line.trim()
+            knownMarkets.forEach { m ->
+                if (trimmed.contains(m, ignoreCase = true) && detectedMarket == null) detectedMarket = trimmed
+            }
+            priceRegex.find(trimmed)?.let { detectedPrice = it.value.replace(",",".") }
+            if (detectedProduct == null && trimmed.length > 3
+                && !trimmed.all { it.isDigit() || it == '.' || it == ',' || it == ' ' || it == ':' || it == '*' }) {
+                detectedProduct = trimmed
+            }
+        }
+        _uiState.update { state ->
+            state.copy(
+                productName = detectedProduct?.take(50) ?: state.productName,
+                marketName = detectedMarket?.take(30) ?: state.marketName,
+                price = detectedPrice ?: state.price
+            )
+        }
+    }
+
     fun dismissError() {
         _uiState.update { it.copy(error = null) }
     }

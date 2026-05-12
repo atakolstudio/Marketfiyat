@@ -105,9 +105,12 @@ fun MarketFiyatNavHost() {
             val productId = backStackEntry.arguments?.getLong("productId")
                 ?.takeIf { it != -1L }
             val barcode = backStackEntry.arguments?.getString("barcode")
+            val ocrResult = backStackEntry.savedStateHandle.get<String>("ocr_result")
+            val barcodeResult = backStackEntry.savedStateHandle.get<String>("barcode")
             AddPriceScreen(
                 productId = productId,
-                initialBarcode = barcode,
+                initialBarcode = barcode ?: barcodeResult,
+                initialOcrResult = ocrResult,
                 onNavigateBack = { navController.popBackStack() },
                 onNavigateToBarcode = { navController.navigate(Screen.BarcodeScanner.route) },
                 onNavigateToOcr = { navController.navigate(Screen.OcrScanner.route) }

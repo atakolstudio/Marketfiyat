@@ -35,6 +35,7 @@ import java.util.*
 fun AddPriceScreen(
     productId: Long?,
     initialBarcode: String?,
+    initialOcrResult: String? = null,
     onNavigateBack: () -> Unit,
     onNavigateToBarcode: () -> Unit,
     onNavigateToOcr: () -> Unit,
@@ -49,6 +50,15 @@ fun AddPriceScreen(
     }
     LaunchedEffect(initialBarcode) {
         initialBarcode?.let { viewModel.loadByBarcode(it) }
+    }
+    LaunchedEffect(initialOcrResult) {
+        initialOcrResult?.let { viewModel.loadFromOcrResult(it) }
+    }
+    LaunchedEffect(initialOcrResult) {
+        initialOcrResult?.let { viewModel.loadFromOcrResult(it) }
+    }
+    LaunchedEffect(initialOcrResult) {
+        initialOcrResult?.let { viewModel.loadFromOcrResult(it) }
     }
     LaunchedEffect(uiState.isSaved) {
         if (uiState.isSaved) onNavigateBack()
