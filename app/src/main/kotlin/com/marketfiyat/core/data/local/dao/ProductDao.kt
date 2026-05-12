@@ -62,7 +62,7 @@ interface ProductDao {
     @Query("""
         SELECT p.* FROM products p
         INNER JOIN product_prices pp ON p.id = pp.product_id
-        WHERE pp.price_alarm_threshold IS NOT NULL
+        WHERE p.price_alarm_threshold IS NOT NULL
         AND pp.effective_price <= p.price_alarm_threshold
     """)
     fun getProductsWithActiveAlarms(): Flow<List<ProductEntity>>
