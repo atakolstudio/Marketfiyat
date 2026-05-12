@@ -20,6 +20,11 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      - name: Install Gradle 9.4.1
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '9.4.1'
+
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
@@ -29,11 +34,8 @@ jobs:
       - name: Install SDK platform
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
-      - name: Make gradlew executable
-        run: chmod +x gradlew
-
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --no-daemon --stacktrace
+        run: gradle assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
