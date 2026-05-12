@@ -20,15 +20,6 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Download Gradle wrapper jar
-        run: |
-          mkdir -p gradle/wrapper
-          curl -L "https://services.gradle.org/distributions/gradle-9.4.1-bin.zip" -o /tmp/gradle.zip
-          cd /tmp && unzip -q gradle.zip
-          cp /tmp/gradle-9.4.1/lib/plugins/gradle-wrapper-*.jar gradle/wrapper/gradle-wrapper.jar 2>/dev/null || \
-          curl -L "https://repo.maven.apache.org/maven2/org/gradle/gradle-wrapper/8.11.1/gradle-wrapper-8.11.1.jar" \
-            -o gradle/wrapper/gradle-wrapper.jar
-
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
@@ -40,14 +31,6 @@ jobs:
 
       - name: Make gradlew executable
         run: chmod +x gradlew
-
-      - name: Cache Gradle
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/libs.versions.toml') }}
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug --no-daemon --stacktrace
