@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Market Fiyat</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Ana Sayfa</string>
+    <string name="nav_archive">Arşiv</string>
+    <string name="nav_shopping_list">Alışveriş</string>
+    <string name="nav_statistics">İstatistik</string>
+    <string name="nav_settings">Ayarlar</string>
+
+    <!-- Home Screen -->
+    <string name="home_total_savings">Toplam Tasarruf</string>
+    <string name="home_cheapest_today">Bugünün En Ucuzları</string>
+    <string name="home_recent_changes">Son Fiyat Değişimleri</string>
+    <string name="home_add_product">Ürün Ekle</string>
+    <string name="home_no_products">Henüz ürün eklenmemiş</string>
+    <string name="home_add_first_product">İlk ürününüzü ekleyin</string>
+
+    <!-- Add Product Screen -->
+    <string name="add_product_title">Ürün Ekle</string>
+    <string name="add_product_name">Ürün Adı</string>
+    <string name="add_product_brand">Marka</string>
+    <string name="add_product_market">Market</string>
+    <string name="add_product_price">Fiyat (TL)</string>
+    <string name="add_product_discounted_price">İndirimli Fiyat (TL)</string>
+    <string name="add_product_quantity">Miktar</string>
+    <string name="add_product_unit">Birim</string>
+    <string name="add_product_date">Tarih</string>
+    <string name="add_product_note">Not</string>
+    <string name="add_product_save">Kaydet</string>
+    <string name="add_product_barcode">Barkod Tara</string>
+    <string name="add_product_ocr">Fiş Oku</string>
+
+    <!-- Units -->
+    <string name="unit_gram">Gram (g)</string>
+    <string name="unit_kilogram">Kilogram (kg)</string>
+    <string name="unit_millilitre">Mililitre (ml)</string>
+    <string name="unit_litre">Litre (L)</string>
+    <string name="unit_piece">Adet</string>
+
+    <!-- Price Analysis -->
+    <string name="price_per_kg">1 KG Fiyatı</string>
+    <string name="price_per_100g">100 GR Fiyatı</string>
+    <string name="price_per_litre">1 Litre Fiyatı</string>
+    <string name="price_per_unit">Adet Fiyatı</string>
+
+    <!-- Market Compare -->
+    <string name="compare_title">Market Karşılaştırması</string>
+    <string name="compare_cheapest">En Ucuz Market</string>
+    <string name="compare_most_expensive">En Pahalı Market</string>
+    <string name="compare_average">Ortalama Fiyat</string>
+
+    <!-- Shopping List -->
+    <string name="shopping_list_title">Alışveriş Listesi</string>
+    <string name="shopping_list_new">Yeni Liste</string>
+    <string name="shopping_list_empty">Liste boş</string>
+    <string name="shopping_list_add_item">Ürün Ekle</string>
+    <string name="shopping_list_total">Tahmini Toplam</string>
+    <string name="shopping_list_best_market">En Uygun Market</string>
+
+    <!-- Archive -->
+    <string name="archive_title">Arşiv</string>
+    <string name="archive_filter">Filtrele</string>
+    <string name="archive_sort">Sırala</string>
+    <string name="archive_search">Ürün Ara…</string>
+
+    <!-- Statistics -->
+    <string name="stats_title">İstatistikler</string>
+    <string name="stats_monthly_spending">Aylık Harcama</string>
+    <string name="stats_market_spending">Market Bazlı Harcama</string>
+    <string name="stats_price_change">Fiyat Değişimi</string>
+    <string name="stats_most_bought">En Çok Alınan</string>
+    <string name="stats_most_expensive">En Çok Zamlanlar</string>
+    <string name="stats_inflation">Enflasyon Grafiği</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Ayarlar</string>
+    <string name="settings_backup">Yedekleme</string>
+    <string name="settings_export_json">JSON Dışa Aktar</string>
+    <string name="settings_import_json">JSON İçe Aktar</string>
+    <string name="settings_export_csv">CSV Dışa Aktar</string>
+    <string name="settings_theme">Tema</string>
+    <string name="settings_dark_mode">Karanlık Mod</string>
+    <string name="settings_dynamic_color">Dinamik Renk</string>
+    <string name="settings_language">Dil</string>
+    <string name="settings_notifications">Bildirimler</string>
+    <string name="settings_price_alarm">Fiyat Alarmı</string>
+    <string name="settings_about">Hakkında</string>
+    <string name="settings_version">Sürüm</string>
+
+    <!-- OCR -->
+    <string name="ocr_title">Fiş Okut</string>
+    <string name="ocr_scanning">Taranıyor…</string>
+    <string name="ocr_permission_required">Kamera izni gerekli</string>
+    <string name="ocr_grant_permission">İzin Ver</string>
+
+    <!-- Barcode -->
+    <string name="barcode_title">Barkod Tara</string>
+    <string name="barcode_scanning">Barkod aranıyor…</string>
+
+    <!-- Errors -->
+    <string name="error_generic">Bir hata oluştu</string>
+    <string name="error_network">İnternet bağlantısı yok</string>
+    <string name="error_empty_name">Ürün adı boş olamaz</string>
+    <string name="error_empty_price">Fiyat boş olamaz</string>
+    <string name="error_invalid_price">Geçersiz fiyat</string>
+    <string name="error_empty_market">Market adı boş olamaz</string>
+
+    <!-- Confirmations -->
+    <string name="confirm_delete">Silmek istediğinize emin misiniz?</string>
+    <string name="confirm_delete_button">Sil</string>
+    <string name="cancel">İptal</string>
+    <string name="ok">Tamam</string>
+    <string name="save">Kaydet</string>
+    <string name="edit">Düzenle</string>
+    <string name="delete">Sil</string>
+    <string name="retry">Tekrar Dene</string>
+
+    <!-- Price Change Messages -->
+    <string name="price_increased">Bu ürün %%.0f oranında zamlandı</string>
+    <string name="price_decreased">Bu ürün %%.0f oranında ucuzladı</string>
+    <string name="price_no_change">Fiyat değişmedi</string>
+    <string name="price_cheapest_6months">Son 6 ayın en ucuz fiyatı</string>
+    <string name="price_above_average">Geçmiş ortalamadan %%.0f daha pahalı</string>
+    <string name="price_below_average">Geçmiş ortalamadan %%.0f daha ucuz</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_price_alert">Fiyat Alarmları</string>
+    <string name="notification_channel_backup">Yedekleme</string>
+    <string name="notification_price_alert_title">Fiyat Alarmı</string>
+    <string name="notification_backup_complete">Yedekleme Tamamlandı</string>
+
+    <!-- Accessibility -->
+    <string name="cd_back">Geri</string>
+    <string name="cd_search">Ara</string>
+    <string name="cd_filter">Filtrele</string>
+    <string name="cd_add">Ekle</string>
+    <string name="cd_delete">Sil</string>
+    <string name="cd_edit">Düzenle</string>
+    <string name="cd_camera">Kamera</string>
+    <string name="cd_barcode">Barkod</string>
+</resources>

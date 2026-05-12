@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,20 C35.2,20 20,35.2 20,54 C20,72.8 35.2,88 54,88 C72.8,88 88,72.8 88,54 C88,35.2 72.8,20 54,20 Z" />
+
+    <!-- Shopping cart icon -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M36,36 L40,36 L46,60 L68,60 L72,44 L42,44 L40,36 Z" />
+    <circle
+        android:fillColor="#1565C0"
+        android:cx="48"
+        android:cy="66"
+        android:r="3" />
+    <circle
+        android:fillColor="#1565C0"
+        android:cx="64"
+        android:cy="66"
+        android:r="3" />
+
+    <!-- Price tag -->
+    <path
+        android:fillColor="#00897B"
+        android:pathData="M58,28 L70,28 L76,34 L76,46 L58,46 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M62,37 L72,37 M62,41 L68,41"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2" />
+
+</vector>
