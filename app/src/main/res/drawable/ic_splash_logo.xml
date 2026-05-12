@@ -4,35 +4,19 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-
-    <!-- Background circle -->
     <path
         android:fillColor="#FFFFFF"
         android:pathData="M54,20 C35.2,20 20,35.2 20,54 C20,72.8 35.2,88 54,88 C72.8,88 88,72.8 88,54 C88,35.2 72.8,20 54,20 Z" />
-
-    <!-- Shopping cart icon -->
     <path
         android:fillColor="#1565C0"
         android:pathData="M36,36 L40,36 L46,60 L68,60 L72,44 L42,44 L40,36 Z" />
-    <circle
+    <path
         android:fillColor="#1565C0"
-        android:cx="48"
-        android:cy="66"
-        android:r="3" />
-    <circle
+        android:pathData="M46,63 C46,61.3 47.3,60 49,60 C50.7,60 52,61.3 52,63 C52,64.7 50.7,66 49,66 C47.3,66 46,64.7 46,63 Z" />
+    <path
         android:fillColor="#1565C0"
-        android:cx="64"
-        android:cy="66"
-        android:r="3" />
-
-    <!-- Price tag -->
+        android:pathData="M62,63 C62,61.3 63.3,60 65,60 C66.7,60 68,61.3 68,63 C68,64.7 66.7,66 65,66 C63.3,66 62,64.7 62,63 Z" />
     <path
         android:fillColor="#00897B"
         android:pathData="M58,28 L70,28 L76,34 L76,46 L58,46 Z" />
-    <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M62,37 L72,37 M62,41 L68,41"
-        android:strokeColor="#FFFFFF"
-        android:strokeWidth="2" />
-
 </vector>
