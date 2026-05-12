@@ -20,6 +20,15 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      - name: Download Gradle wrapper jar
+        run: |
+          mkdir -p gradle/wrapper
+          curl -L "https://services.gradle.org/distributions/gradle-9.4.1-bin.zip" -o /tmp/gradle.zip
+          cd /tmp && unzip -q gradle.zip
+          cp /tmp/gradle-9.4.1/lib/plugins/gradle-wrapper-*.jar gradle/wrapper/gradle-wrapper.jar 2>/dev/null || \
+          curl -L "https://repo.maven.apache.org/maven2/org/gradle/gradle-wrapper/8.11.1/gradle-wrapper-8.11.1.jar" \
+            -o gradle/wrapper/gradle-wrapper.jar
+
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
